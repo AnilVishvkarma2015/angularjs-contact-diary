@@ -4,7 +4,6 @@
   "description": "An angularjs 1.5.8 based contact diary",
   "main": "server.js",
   "scripts": {
-    "build": "gulp scripts styles",
     "start": "http-server"    
   },
   "engines": {
