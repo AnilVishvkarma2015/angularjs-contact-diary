@@ -180,26 +180,26 @@ table tbody tr:last-child {
 
 .login-form {
   height: 300px;
-  width: 800px;
+  width: 1150px;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #5757a3 0%, #06b7ef 74%);
   margin-top: 150px; }
 
 .login-box {
   height: 230px;
-  width: 600px;
-  margin: 35px 10px 10px 150px;
+  margin: 50px 0 0 0;
   border-top-left-radius: 250px;
   border-bottom-left-radius: 250px;
   background: #f0f8ff; }
 
 .login-fields {
   width: 700px;
-  margin: 30px 180px; }
+  margin: 30px 100px; }
 
 .login-heading {
-  margin: -15px 0 15px 120px;
+  margin: -15px 0 10px 100px;
   font-size: 20px;
+  padding: 10px;
   font-family: 'Passion One', cursive;
   text-transform: uppercase; }
 
@@ -272,3 +272,11 @@ table tbody tr:last-child {
   border-bottom: 1px solid white;
   margin-left: -3rem;
   cursor: pointer; }
+
+ol li {
+  font-family: "Open Sans",sans-serif;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 10px;
+  margin-left: -40px; }
