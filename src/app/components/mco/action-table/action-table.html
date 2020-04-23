@@ -1,0 +1,48 @@
+<top-nav-login></top-nav-login>
+
+<div class="col-md-12">
+    <div class="col-md-2" style="height: 100%;">
+        <div class="side-nav-options">
+            <span ng-click="$ctrl.showCollapsibleTable()">Action Table Collapsible </span>
+        </div>
+
+        <div class="side-nav-options">
+            <span ng-click="$ctrl.showNormalTable()"> Action Table Normal</span>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div ng-class="showCollapsibleActionTable ? 'toggle-show' : 'toggle-hide'" class="col-md-5">
+            <div class="mco-table">
+                <div class="mco-table-heading">
+                    action tables
+                </div>
+                <div class="mco-table-contents">
+                    <div>States Text : {{ $ctrl.mcoObjectDetails.statesText}}</div>
+                    <div>Number of States : {{ $ctrl.mcoObjectDetails.noOfStates}}</div>
+                    <div>Relinquish Default : {{ $ctrl.mcoObjectDetails.relinquishDefault}}</div>
+                </div>
+
+                <div ng-repeat="state in $ctrl.mcoStates">
+                    <action-table-items-collapsible items="state"></action-table-items-collapsible>
+                </div>
+            </div>
+        </div>
+
+        <div ng-class="showNormalActionTable ? 'toggle-show' : 'toggle-hide'">
+            <div class="mco-table">
+                <div class="mco-table-heading">
+                    action tables
+                </div>
+                <div class="mco-table-contents">
+                    <div>States Text : {{ $ctrl.mcoObjectDetails.statesText}}</div>
+                    <div>Number of States : {{ $ctrl.mcoObjectDetails.noOfStates}}</div>
+                    <div>Relinquish Default : {{ $ctrl.mcoObjectDetails.relinquishDefault}}</div>
+                </div>
+
+                <div ng-repeat="state in $ctrl.mcoStates">
+                    <action-table-items-normal items="state"></action-table-items-normal>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

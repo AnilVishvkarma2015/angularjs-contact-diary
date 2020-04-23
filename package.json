@@ -1,0 +1,34 @@
+{
+  "name": "contact-diary",
+  "version": "1.0.0",
+  "description": "An angularjs 1.5.8 based contact diary",
+  "main": "server.js",
+  "scripts": {
+    "build": "gulp scripts styles",
+    "start": "http-server"    
+  },
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
+  "author": "Anil Vishvkarma",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-jshint": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-server": "^0.12.1",
+    "path": "^0.12.7"
+  }
+}

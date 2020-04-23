@@ -1,0 +1,21 @@
+<table class="state-table">
+    <thead class="state-table-actions-heading">
+        <th colspan="5">
+            Actions For Condition : {{$ctrl.items.stateName}}
+        </th>
+    </thead>
+    <tbody>
+        <tr class="state-table-column-heading">
+            <td>ITEM</td>
+            <td>COMMAND</td>
+            <td>PRIORITY</td>
+            <td>DELAY</td>
+        </tr>
+        <tr ng-repeat="attribute in $ctrl.items.stateAttributes">
+            <td>{{attribute.item}}</td>
+            <td>{{attribute.command}}</td>
+            <td>{{attribute.priority}}</td>
+            <td>{{attribute.delay}}</td>
+        </tr>
+    </tbody>
+</table>

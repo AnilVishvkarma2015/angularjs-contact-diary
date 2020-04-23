@@ -1,0 +1,23 @@
+<table class="state-table">
+    <thead class="state-table-actions-heading">
+        <th colspan="5">
+            <i ng-class="isExpanded ? 'fa fa-minus' : 'fa fa-plus'" ng-click="$ctrl.toggleData()"></i>
+            Actions For Condition : {{$ctrl.items.stateName}}
+            <i class="edit-action" ng-class="isExpanded ? 'fa fa-edit': ''" ng-click="$ctrl.editRow()"></i>
+        </th>
+    </thead>
+    <tbody ng-class="isExpanded ? 'toggle-show' : 'toggle-hide'">
+        <tr class="state-table-column-heading">
+            <td>ITEM</td>
+            <td>COMMAND</td>
+            <td>PRIORITY</td>
+            <td>DELAY</td>
+        </tr>
+        <tr ng-repeat="attribute in $ctrl.items.stateAttributes">
+            <td>{{attribute.item}}</td>
+            <td>{{attribute.command}}</td>
+            <td>{{attribute.priority}}</td>
+            <td>{{attribute.delay}}</td>
+        </tr>
+    </tbody>
+</table>

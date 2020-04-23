@@ -1,0 +1,25 @@
+<top-nav-login></top-nav-login>
+<div class="container">
+    <div class="row">
+        <table class="contacts-table" style="position: fixed">
+            <thead>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in $ctrl.users">
+                    <td>{{user.name}}</td>
+                    <td>{{user.company}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.mobile}}</td>
+                    <td><i class="fa fa-edit edit-user" ng-click="$ctrl.editUser(user)"></i>
+                        <i class="fa fa-trash edit-user" ng-click="$ctrl.editUser(user)"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<top-nav-login></top-nav-login>
+<div class="container">
+    <div class="row">
+        <div ng-repeat="user in $ctrl.users">
+            <div class="col-xs-12 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-img-top">
+                        <span ng-if="user.gender === 'male'">
+                            <img class="user-icon" src="../../../../src/assets/img/male-user.png" alt="user img">
+                        </span>
+
+                        <span ng-if="user.gender === 'female'">
+                            <img class="user-icon" src="../../../../src/assets/img/female-user.png" alt="user img">
+                        </span>
+                    </div>
+                    <div class="card-block">
+                        <div class="cards-name"> {{user.name}}</div>
+                        <div class="cards-options"> {{user.company}}</div>
+                        <div class="cards-options"> {{user.email}}</div>
+                        <div class="cards-options"> +91 {{user.mobile}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
