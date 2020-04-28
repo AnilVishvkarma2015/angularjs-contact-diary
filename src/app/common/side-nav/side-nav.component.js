@@ -1,10 +1,6 @@
 const sideNav = {
     templateUrl: './app/common/side-nav/side-nav.html',
-    controller: SideNavController,
-    bindings: {
-        user: '<'
-    }
+    controller: SideNavController
 };
 
 angular.module('root').component('sideNav', sideNav);
-

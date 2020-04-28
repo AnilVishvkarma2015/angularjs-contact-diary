@@ -1,7 +1,7 @@
 function ActionTableItemsNormalController($scope) {
     const ctrl = this;
     this.$onInit = () => {
-        console.log("Action Table Items =", ctrl.items);
+       // console.log("Action Table Items =", ctrl.items);
     };
 
     $scope.isExpanded = false;

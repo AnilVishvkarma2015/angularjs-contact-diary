@@ -21,5 +21,4 @@ function routeProvider($routeProvider) {
 }
 routeProvider.$inject = ['$routeProvider'];
 
-angular.module('root')
-    .config(routeProvider);
+angular.module('root').config(routeProvider);

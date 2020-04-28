@@ -1,9 +1,37 @@
-<div class="side-nav-options">
-    Action Table Collapsible
-</div>
-<div class="side-nav-options">
-    Action Table Collapsible
-</div>
-<div class="check">
- Hi
+<div class="side-nav-drawer">
+    <div class="nav">
+        <div class="nav-items">
+            <ul>
+                <li><a href="#/dashboard">contacts dashboard</a></li>
+                <li><a href="#/users">contacts list</a></li>
+                <li><a href="#/user/new">add new contact</a></li>
+                <li><a href="#/action-table">action tables</a></li>
+                <li><a href="#/logout">logout</a></li>
+            </ul>
+            <div class="wheather-card">
+                <img class="cloudy" src="../../..//src/assets/img/cloudy-icon.png" alt="User">
+                <div class="cloud-state">{{$ctrl.wheatherData.cloudState}}</div>
+                <div class="location">{{$ctrl.wheatherData.city}} {{$ctrl.wheatherData.state}}
+                    {{$ctrl.wheatherData.country}}</div>
+                <div class="temp">{{$ctrl.wheatherData.temp}}&#8451;</div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-5">
+                            <div class="extra-card-pressure">
+                                Pressure <br>
+                                {{$ctrl.wheatherData.pressure}} mb
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="extra-card-wind">
+                                Wind <br>
+                                {{$ctrl.wheatherData.wind}} kmph
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

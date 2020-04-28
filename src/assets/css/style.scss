@@ -12,8 +12,7 @@
         background-color: #283593;
         width: 100%;
         height: 60px;
-        margin-top: -10px;
-  
+     
         .user {
             float: right;
             padding-top: 9px;
@@ -42,23 +41,24 @@
     }
   
     .nav-items {
-        width: 100%;
-        height: 60px;
-        
-        ul li {
-            list-style-type: none;
-            float: right;
-            padding: 20px 14px;
-            
-            a {
-                color: white;
-                text-align: center;
-                font-family: "Open Sans",sans-serif;
-                font-size: 13px;
-                font-weight: 700;
-                text-decoration: none;
-                text-transform: uppercase;
-                text-shadow: 2px 2px 4px #000;
+        ul {
+            margin: 0px;
+            padding: 0px;
+            li {
+                list-style-type: none;
+                margin: 10px 0 0 0;
+                border-bottom: 1px solid white;
+                height: 45px;
+                
+                a {
+                    color: white;
+                    text-align: center;
+                    font-family: "Open Sans",sans-serif;
+                    font-size: 14px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin-left: 16px;
+                }
             }
         }
     }
@@ -113,14 +113,14 @@
 
 .registration-form {
     height: 400px;
-    width: 1100px;
+    width: 1000px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,87,163,1) 0%, rgba(6,183,239,1) 74%);
 }
 
 .registration-box {
     height: 330px;
-    width: 800px;
+    width: 700px;
     margin: 35px 10px 10px 250px;
     border-top-left-radius: 250px;
     border-bottom-left-radius: 250px;
@@ -128,12 +128,12 @@
 }
 
 .registration-fields {
-    width: 700px;
-    margin: 30px 180px;
+    width: 600px;
+    margin: 30px 120px;
 }
 
 .registration-heading {
-    margin: -15px 0 15px 200px;
+    margin: -15px 0 15px 170px;
     font-size: 20px;
     font-family: 'Passion One', cursive;
     text-transform: uppercase;
@@ -184,13 +184,14 @@ h3 {
 table {
     min-width: 1000px;
     margin: auto;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .contacts-table {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background:  #f0f8ff;
     margin-left: 80px;
+    margin-top: 20px;
 }
 
 table thead th {
@@ -254,9 +255,9 @@ table tbody tr:last-child {
 /* MCO Table Specific styles */
 
 .mco-table {
-    margin: auto;
-    margin-top: 40px;
-    width: 90%;
+    margin-top: 50px;
+    margin-left: 350px;
+    width: 70%;
     min-height: auto;
     margin-bottom: -35px;
     border: 1px solid black;
@@ -315,17 +316,12 @@ table tbody tr:last-child {
 /* Side Navigation Styles */
 
 .side-nav-options {
-    padding: 15px 10px;
+    padding: 15px;
     color: white;
     font-family: "Open Sans",sans-serif;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px #000;
-    background: #283593;
-    border-top: 1px solid white;
     border-bottom: 1px solid white;
-    margin-left: -3rem;
     cursor: pointer;
 }
 
@@ -338,4 +334,81 @@ ol li {
     margin-left: -40px;
 }
 
+.side-nav-drawer {
+    font-size: 20px;
+    background: #283593;
+    width: 300px;
+    bottom: 0;
+    top:60px;
+    position: absolute;
+    display: inline-block;
+    border-top: 1px solid white;
+    box-shadow: 3px 20px 16px rgba(0,0,0,.24);
+}
+
+.dashboard-card-align {
+    margin-left: 60px;
+}
+
+.wheather-card {
+    min-height: 365px;
+    width: 270px;
+    margin: 80px auto;
+    background: #16394c;
+    border-radius: 12px;
+    border: 4px solid white;
+    box-shadow: 3px 20px 16px rgba(0,0,0,.24);
+    color: white;
+}
+
+.cloudy {
+    height: 100px;
+    width: 100px;
+    margin-left: 83px;
+}
+
+.location {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 8px;
+    text-transform: capitalize;
+    font-family: "Open Sans",sans-serif;
+}
+
+.cloud-state {
+    font-size: 12px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: "Open Sans",sans-serif;
+}
+
+.temp {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    font-family: "Open Sans",sans-serif;
+}
+
+.extra-card-pressure {
+    font-size: 15px;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid white;
+    font-family: "Open Sans",sans-serif;
+}
+
+.extra-card-wind {
+    font-size: 15px;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: 1.5px solid white;
+    font-family: "Open Sans",sans-serif;
+}
 

@@ -1,11 +1,11 @@
 function LoginController($location) {
     const ctrl = this;
+    localStorage.removeItem('wheather');
     const username = 'anil';
     const password = 'India@123';
     let isLoginFailed = false;
 
     ctrl.login = function (credentials) {
-        console.log(credentials);
         if (credentials && credentials.username === username && credentials.password === password) {
             isLoginFailed = false;
             localStorage.setItem('login', true);
