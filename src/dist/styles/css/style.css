@@ -50,7 +50,7 @@
 .card {
   min-height: 200px;
   margin-top: 20px;
-  width: 260px;
+  width: 220px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: #f0f8ff; }
 
@@ -70,7 +70,7 @@
 
 .card-img-top {
   height: 85px;
-  width: 260px;
+  width: 221px;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #5757a3 0%, #06b7ef 74%); }
 
@@ -84,12 +84,14 @@
   width: 60px;
   border-radius: 50%;
   border: 2px solid white;
-  margin-left: 100px;
+  margin-left: 80px;
   margin-top: 12px; }
 
 .registration-form {
   height: 400px;
   width: 1000px;
+  margin-left: 360px;
+  margin-top: 50px;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #5757a3 0%, #06b7ef 74%); }
 
@@ -156,7 +158,7 @@ table {
 .contacts-table {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background: #f0f8ff;
-  margin-left: 80px;
+  margin-left: 170px;
   margin-top: 20px; }
 
 table thead th {
@@ -288,12 +290,12 @@ ol li {
   box-shadow: 3px 20px 16px rgba(0, 0, 0, 0.24); }
 
 .dashboard-card-align {
-  margin-left: 60px; }
+  margin-left: 150px; }
 
 .wheather-card {
-  min-height: 365px;
+  min-height: 355px;
   width: 270px;
-  margin: 80px auto;
+  margin: 20px auto;
   background: #16394c;
   border-radius: 12px;
   border: 4px solid white;
@@ -327,20 +329,22 @@ ol li {
   font-family: "Open Sans",sans-serif; }
 
 .extra-card-pressure {
-  font-size: 15px;
-  text-align: center;
   width: 100px;
   padding: 10px;
   border-radius: 8px;
   border: 1.5px solid white;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
   font-family: "Open Sans",sans-serif; }
 
 .extra-card-wind {
-  font-size: 15px;
-  text-align: center;
   width: 100px;
   padding: 10px;
   margin-left: 10px;
   border-radius: 8px;
   border: 1.5px solid white;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
   font-family: "Open Sans",sans-serif; }
