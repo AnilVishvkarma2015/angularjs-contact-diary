@@ -17,22 +17,21 @@ function convertTime(timestamp) {
     return formattedTime;
 }
 
-function WheatherService($http, $q) {
-    this.getWheatherDetails = function () {
+function WeatherService($http, $q) {
+    this.getWeatherDetails = function () {
         const deferred = $q.defer();
 
         $http({ method: 'GET', url: 'https://api.openweathermap.org/data/2.5/weather?q=pune,in&appid=0a432490e7ea75a3c85f5950640d256d' })
             .then(function (response) {
-                console.log("response --", response);
                 if (response.status !== 200) {
-                    const errorMessage = "Wheather response is not in 200 status code. Please try again after some time."
+                    const errorMessage = "Weather response is not in 200 status code. Please try again after some time."
                     deferred.resolve(errorMessage);
                     return;
                 }
 
                 const responseData = response.data;
 
-                let wheatherData = {
+                let weatherData = {
                     city: responseData.name,
                     state: 'Maharashtra',
                     country: 'India',
@@ -42,9 +41,7 @@ function WheatherService($http, $q) {
                     cloudState: responseData.weather[0].description
                 };
 
-                console.log("wheatherData --", wheatherData)
-
-                deferred.resolve(wheatherData);
+                deferred.resolve(weatherData);
             }, function (err) {
                 console.log(err);
                 deferred.reject(err);
@@ -54,7 +51,6 @@ function WheatherService($http, $q) {
     }
 }
 
-WheatherService.$inject = ['$http', '$q'];
+WeatherService.$inject = ['$http', '$q'];
 
-angular.module('root').service('WheatherService', WheatherService);
-
+angular.module('root').service('WeatherService', WeatherService);

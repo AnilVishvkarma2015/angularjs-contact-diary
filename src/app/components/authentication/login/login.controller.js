@@ -1,6 +1,6 @@
 function LoginController($location) {
     const ctrl = this;
-    localStorage.removeItem('wheather');
+    localStorage.removeItem('weather');
     const username = 'anil';
     const password = 'India@123';
     let isLoginFailed = false;
