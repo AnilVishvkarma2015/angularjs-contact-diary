@@ -5,6 +5,7 @@
 .row {
     margin-left: unset;
     margin-right: unset;
+    background: #373a47
 }
 
 .nav {
@@ -12,6 +13,8 @@
         background-color: #283593;
         width: 100%;
         height: 60px;
+        position: fixed;
+        border-bottom: 2px solid white;
      
         .user {
             float: right;
@@ -46,18 +49,19 @@
             padding: 0px;
             li {
                 list-style-type: none;
-                margin: 10px 0 0 0;
+                margin-top: 7px;
                 border-bottom: 1px solid white;
-                height: 45px;
+                height: 40px;
                 
                 a {
                     color: white;
                     text-align: center;
                     font-family: "Open Sans",sans-serif;
-                    font-size: 14px;
+                    font-size: 12px;
                     text-decoration: none;
                     text-transform: uppercase;
-                    margin-left: 16px;
+                    margin-left: 13px;
+                    font-weight: bold;
                 }
             }
         }
@@ -65,20 +69,17 @@
 }
 
 .card {
-    min-height:200px;
-    margin-top:20px;
-    width: 220px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background:  #f0f8ff;
-}
-
-.container {
-    margin-top: 35px;
+    min-height: 200px;
+    box-shadow: 10px 10px 44px 0px rgba(0, 0, 0, 0.75);
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 18px;
 }
 
 .card-block {
     padding: 15px;
     line-height: 20px;
+    border-top: 1px solid white;
 }
 
 .cards-name {
@@ -91,9 +92,7 @@
 
 .card-img-top {
     height: 85px;
-    width: 221px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,87,163,1) 0%, rgba(6,183,239,1) 74%);
+    width: 245px;
 }
 
 .cards-options {
@@ -107,43 +106,25 @@
     width: 60px;
     border-radius: 50%;
     border: 2px solid white;
-    margin-left: 80px;
+    margin-left: 95px;
     margin-top: 12px;
 }
 
-.registration-form {
-    height: 400px;
-    width: 1000px;
-    margin-left: 360px;
-    margin-top: 50px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,87,163,1) 0%, rgba(6,183,239,1) 74%);
-}
-
-.registration-box {
-    height: 330px;
-    width: 700px;
-    margin: 35px 10px 10px 250px;
-    border-top-left-radius: 250px;
-    border-bottom-left-radius: 250px;
-    background: #f0f8ff;
-}
-
-.registration-fields {
-    width: 600px;
-    margin: 30px 120px;
-}
-
 .registration-heading {
-    margin: -15px 0 15px 170px;
-    font-size: 20px;
-    font-family: 'Passion One', cursive;
+    font-weight: 600;
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    text-align: center;
     text-transform: uppercase;
+    margin-bottom: -20px;
+    color: white;
+    margin-top: 27px;
 }
 
 .form-control {
     border-radius: unset;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 }
 
 .btn {
@@ -162,27 +143,6 @@ h3 {
     margin: inherit;
 }
 
-#snackbar {
-    min-width: 250px;
-    margin-left: 300px;
-    background-color: green;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 178px;
-    font-size: 17px;
-}
-
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
 table {
     min-width: 1000px;
     margin: auto;
@@ -191,23 +151,27 @@ table {
 
 .contacts-table {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background:  #f0f8ff;
-    margin-left: 170px;
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 table thead th {
-    border-collapse: collapse;
-    padding: 10px;
+    padding: 12px;
+    background: #373a30;
+    color: white;
 }
 
 table tbody td {
-    border-collapse: collapse;
-    padding: 10px;
+    padding: 12px;
+    color: white;
+    background: #373a30;
 }
 
 table tbody tr {
-    border-top: 1px solid black;
+    border-top: 2px solid black;
+}
+
+tr:hover td {
+    background-color: #778899;
 }
 
 table tbody tr:last-child {
@@ -215,38 +179,21 @@ table tbody tr:last-child {
     margin-bottom: 20px;
 }
 
-.edit-user {
-    cursor: pointer;
-    margin-left: 5px;
-}
-
 .login-form {
-    height: 300px;
-    width: 1150px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,87,163,1) 0%, rgba(6,183,239,1) 74%);
-    margin-top: 150px;
-}
-
-.login-box {
-    height: 230px;
-    margin: 50px 0 0 0;
-    border-top-left-radius: 250px;
-    border-bottom-left-radius: 250px;
-    background: #f0f8ff;
-}
-
-.login-fields {
-    width: 700px;
-    margin: 30px 100px;
+    margin-top: 200px;
+    background: #373a47;
+    min-height: 320px;
+    border-radius: 4px;
+    padding: 50px;
 }
 
 .login-heading {
-    margin: -15px 0 10px 100px;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 22px;
     font-family: 'Passion One', cursive;
     text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
 .login-error-message {
@@ -257,11 +204,7 @@ table tbody tr:last-child {
 /* MCO Table Specific styles */
 
 .mco-table {
-    margin-top: 50px;
-    margin-left: 350px;
-    width: 70%;
-    min-height: auto;
-    margin-bottom: -35px;
+    margin-left: 20px;
     border: 1px solid black;
     border-radius: 4px;
 }
@@ -338,80 +281,161 @@ ol li {
 
 .side-nav-drawer {
     font-size: 20px;
-    background: #283593;
-    width: 300px;
+    background: #373a47;
+    margin-left: -15px;
     bottom: 0;
     top:60px;
-    position: absolute;
+    position: fixed;
     display: inline-block;
-    border-top: 1px solid white;
-    box-shadow: 3px 20px 16px rgba(0,0,0,.24);
+    box-shadow: 3px 20px 16px rgba(0, 0, 0, 0.24);
+    width: 300px;
 }
 
 .dashboard-card-align {
     margin-left: 150px;
 }
 
-.weather-card {
-    min-height: 355px;
-    width: 270px;
-    margin: 20px auto;
-    background: #16394c;
-    border-radius: 12px;
-    border: 4px solid white;
-    box-shadow: 3px 20px 16px rgba(0,0,0,.24);
+.col-sm-9 {
+    margin-left: -30px;
+    margin-top: 88px;
+    min-height: 610px;
+}
+
+/* Weather Dashboard Stylings */
+
+.weather-dashboard {
+    background: #373a47;
+} 
+
+.weather-dashboard-head {
     color: white;
+    padding: 15px;
 }
 
-.cloudy {
-    height: 100px;
-    width: 100px;
-    margin-left: 83px;
+hr {
+    margin-top: 34px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 3px solid #eee;
+    width: 1090px;
 }
 
-.location {
-    font-size: 15px;
-    text-align: center;
-    margin-top: 8px;
-    text-transform: capitalize;
-    font-family: "Open Sans",sans-serif;
-}
-
-.cloud-state {
-    font-size: 12px;
-    text-align: center;
-    text-transform: capitalize;
+.forecast {
     font-weight: 600;
     font-family: "Open Sans",sans-serif;
+    margin-top: 8px;
+    font-size: 15px;
+    margin-left: -8px;
 }
 
-.temp {
+.weather-current-location {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+    text-transform: capitalize;
+    font-family: "Open Sans",sans-serif;
+}
+
+.weather-current-temp {
     font-size: 80px;
     font-weight: bold;
     text-align: center;
-    margin-top: 5px;
+    margin-bottom: -20px;
     font-family: "Open Sans",sans-serif;
+    color: white;
 }
 
-.extra-card-pressure {
-    width: 100px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1.5px solid white;
-    font-size: 12px;
+.weather-current-cloudstate {
+    font-size: 14px;
     text-align: center;
-    font-weight: 600;
     font-family: "Open Sans",sans-serif;
+    color: white;
+    margin-top: 8px;
 }
 
-.extra-card-wind {
-    width: 100px;
-    padding: 10px;
-    margin-left: 10px;
-    border-radius: 8px;
-    border: 1.5px solid white;
-    font-size: 12px;
+.weather-current-metadata {
+    font-size: 13px;
     text-align: center;
-    font-weight: 600;
     font-family: "Open Sans",sans-serif;
+    color: white;
+    margin-top: 13px;
+}
+
+.search {
+    font-size: 13px;
+    padding: 6px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    margin: 0px;
+    border: 1px solid;
+    background: black;
+}
+
+.search-button {
+    background: #373a47;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 5px 14px;
+}
+
+.weather-forecast-group {
+    height: 215px;
+    width: 750px;
+    margin: auto;
+}
+
+.weather-forecast-card {
+    font-size: 14px;
+    min-height: 190px;
+    color: white;
+    text-align: center;
+    padding: 1px 25px 0px 25px;
+    box-shadow: 10px 10px 44px 0px rgba(0,0,0,0.75);
+}
+
+.weather-forecast-metadata {
+    font-size: 13px;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+    color: white;
+}
+
+.weather-forecast-temps {
+    text-align: center;
+    font-size:18px;
+    margin-top: 10px;
+}
+
+.hr1 {
+    border-top: 3px solid #eee;
+    width: 718px;
+}
+
+.add-new-user {
+    font-size: 40px;
+    margin: auto;
+    padding: 70px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.footer {
+    min-height: 35px;
+    background: #778899;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.copyright {
+    margin-left: 280px;
+    padding: 9px;
+    font-family: "Open Sans",sans-serif;
+}
+.nav-icon {
+    margin-left: 13px;
+    font-size: 13px;
+    color: white;
 }

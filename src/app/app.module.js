@@ -3,6 +3,7 @@ angular.module('root', [
     'dashboard',
     'user',
     'authentication',
-    'mco'
+    'mco',
+    'weather'
 ]);
 

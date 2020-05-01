@@ -1,10 +1,17 @@
 <top-nav-login></top-nav-login>
-<side-nav></side-nav>
-<div class="container registration-form">
-    <div class="component registration-box col-md-11">
-        <div class="registration-fields">
-            <div class="registration-heading">User Registration</div>
-            <div class="col-md-5">
+
+<div class="row">
+    <div class="col-sm-3">
+        <side-nav></side-nav>
+    </div>
+    <div class="col-sm-9">
+        <div class="registration-heading">
+            new User Registration
+        </div>
+        <hr>
+        <div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="First Name" ng-model="$ctrl.user.firstName">
                 </div>
@@ -22,7 +29,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-sm-4">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Last Name" ng-model="$ctrl.user.lastName">
                 </div>
@@ -39,6 +46,8 @@
                     <button class="btn btn-primary" ng-click="$ctrl.newUser($ctrl.user)">Submit</button>
                 </div>
             </div>
+            <div class="col-sm-2"></div>
         </div>
     </div>
 </div>
+<footer-component></footer-component>

@@ -1,0 +1,21 @@
+<div class="weather-forecast-group">
+    <div ng-repeat="day in $ctrl.forecastDetails">
+        <div class="col-sm-4">
+            <div class="weather-forecast-card">
+                <div class="weather-current-metadata">
+                    {{day.date_month}}
+                </div>
+                <div>
+                    <img src="{{day.cloud_icon}}">
+                </div>
+                <div class="weather-forecast-metadata">
+                    {{day.cloud_state}}
+                </div>
+                <div class="weather-forecast-temps">
+                    <i class="fa fa-long-arrow-up weather-forecast-temps"></i> {{day.temp_high}}&#176; &nbsp;&nbsp;
+                    <i class="fa fa-long-arrow-down"></i> {{day.temp_low}}&#176;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

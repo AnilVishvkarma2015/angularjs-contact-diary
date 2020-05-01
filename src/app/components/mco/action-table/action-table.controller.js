@@ -53,60 +53,6 @@ function ActionTableController($scope) {
                     delay: '200 Seconds'
                 }
             ]
-        },
-        {
-            stateName: 'State 30',
-            stateAttributes: [
-                {
-                    item: 'AV10',
-                    command: 'Cooling',
-                    priority: '16 (Default)',
-                    delay: '100 Seconds'
-                }, {
-                    item: 'BV20',
-                    command: 'Heating',
-                    priority: '16 (Default)',
-                    delay: '200 Seconds'
-                },
-                {
-                    item: 'AV30',
-                    command: 'Cooling',
-                    priority: '16 (Default)',
-                    delay: '100 Seconds'
-                }, {
-                    item: 'BV40',
-                    command: 'Heating',
-                    priority: '16 (Default)',
-                    delay: '200 Seconds'
-                },
-                {
-                    item: 'AV50',
-                    command: 'Cooling',
-                    priority: '16 (Default)',
-                    delay: '100 Seconds'
-                }, {
-                    item: 'BV60',
-                    command: 'Heating',
-                    priority: '16 (Default)',
-                    delay: '200 Seconds'
-                }
-            ]
-        },
-        {
-            stateName: 'State 40',
-            stateAttributes: [
-                {
-                    item: 'AV10',
-                    command: 'Cooling',
-                    priority: '16 (Default)',
-                    delay: '100 Seconds'
-                }, {
-                    item: 'BV20',
-                    command: 'Heating',
-                    priority: '16 (Default)',
-                    delay: '200 Seconds'
-                }
-            ]
         }
     ]
 }

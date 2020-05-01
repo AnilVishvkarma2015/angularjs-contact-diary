@@ -1,35 +1,42 @@
 <top-nav-login></top-nav-login>
-<side-nav></side-nav>
-<div ng-class="showCollapsibleActionTable ? 'toggle-show' : 'toggle-hide'" class="col-md-5">
-    <div class="mco-table">
-        <div class="mco-table-heading">
-            action tables
-        </div>
-        <div class="mco-table-contents">
-            <div>States Text : {{ $ctrl.mcoObjectDetails.statesText}}</div>
-            <div>Number of States : {{ $ctrl.mcoObjectDetails.noOfStates}}</div>
-            <div>Relinquish Default : {{ $ctrl.mcoObjectDetails.relinquishDefault}}</div>
-        </div>
 
-        <div ng-repeat="state in $ctrl.mcoStates">
-            <action-table-items-collapsible items="state"></action-table-items-collapsible>
-        </div>
+<div class="row">
+    <div class="col-sm-3">
+        <side-nav></side-nav>
     </div>
-</div>
+    <div class="col-sm-9">
+        <div ng-class="showCollapsibleActionTable ? 'toggle-show' : 'toggle-hide'" class="col-md-5">
+            <div class="mco-table">
+                <div class="mco-table-heading">
+                    action tables
+                </div>
+                <div class="mco-table-contents">
+                    <div>States Text : {{ $ctrl.mcoObjectDetails.statesText}}</div>
+                    <div>Number of States : {{ $ctrl.mcoObjectDetails.noOfStates}}</div>
+                    <div>Relinquish Default : {{ $ctrl.mcoObjectDetails.relinquishDefault}}</div>
+                </div>
 
-<div ng-class="showNormalActionTable ? 'toggle-show' : 'toggle-hide'">
-    <div class="mco-table">
-        <div class="mco-table-heading">
-            action tables
-        </div>
-        <div class="mco-table-contents">
-            <div>States Text : {{ $ctrl.mcoObjectDetails.statesText}}</div>
-            <div>Number of States : {{ $ctrl.mcoObjectDetails.noOfStates}}</div>
-            <div>Relinquish Default : {{ $ctrl.mcoObjectDetails.relinquishDefault}}</div>
+                <div ng-repeat="state in $ctrl.mcoStates">
+                    <action-table-items-collapsible items="state"></action-table-items-collapsible>
+                </div>
+            </div>
         </div>
 
-        <div ng-repeat="state in $ctrl.mcoStates">
-            <action-table-items-normal items="state"></action-table-items-normal>
+        <div ng-class="showNormalActionTable ? 'toggle-show' : 'toggle-hide'">
+            <div class="mco-table">
+                <div class="mco-table-heading">
+                    action tables
+                </div>
+                <div class="mco-table-contents">
+                    <div>States Text : {{ $ctrl.mcoObjectDetails.statesText}}</div>
+                    <div>Number of States : {{ $ctrl.mcoObjectDetails.noOfStates}}</div>
+                    <div>Relinquish Default : {{ $ctrl.mcoObjectDetails.relinquishDefault}}</div>
+                </div>
+
+                <div ng-repeat="state in $ctrl.mcoStates">
+                    <action-table-items-normal items="state"></action-table-items-normal>
+                </div>
+            </div>
         </div>
     </div>
 </div>

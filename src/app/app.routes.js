@@ -10,13 +10,16 @@ function routeProvider($routeProvider) {
             template: '<users></users>'
         })
         .when('/dashboard', {
-            template: '<dashboard></dashboard>'
+            template: '<dashboard-cards></dashboard-cards>'
         })
         .when('/logout', {
             template: '<login></login>'
         })
         .when('/action-table', {
             template: '<action-table></action-table>'
+        })
+        .when('/weather', {
+            template: '<weather-dashboard></weather-dashboard>'
         });
 }
 routeProvider.$inject = ['$routeProvider'];

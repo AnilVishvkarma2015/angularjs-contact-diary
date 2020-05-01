@@ -1,0 +1,98 @@
+<top-nav-login></top-nav-login>
+
+<div class="row">
+    <div class="col-sm-3">
+        <side-nav></side-nav>
+    </div>
+    <div class="col-sm-9">
+        <div class="weather-dashboard">
+            <div class="weather-dashboard-head">
+                <div class="col-sm-6 forecast">
+                    Wheather Forecast
+                </div>
+                <div class="col-sm-1">
+
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Enter Your City (Auto Complete)" id="city"
+                        ng-model="citySelected" onkeyup="getCity(event)">
+                </div>
+                <div class="col-sm-1">
+                    <button type="submit" class="search-button" ng-click="$ctrl.getWeatherForCitySelected()">Search</button>
+                </div>
+            </div>
+            <hr>
+            <div ng-if="isLoading">
+                <div class="weather-current-temp">
+                    <img src="../../../src/dist/img/loader.gif">
+                </div>
+            </div>
+
+            <div ng-if="!isLoading">
+                <div ng-if="$ctrl.wheatherResponse.isError">
+                    <div class="weather-current-location">
+                        {{$ctrl.wheatherResponse.errorMessage}}
+                    </div>
+                </div>
+
+                <div ng-if="!$ctrl.wheatherResponse.isError">
+                    <div class="weather-current-location">
+                        {{$ctrl.wheatherResponse.city}}, {{$ctrl.wheatherResponse.state}},
+                        {{$ctrl.wheatherResponse.country}}
+                    </div>
+
+                    <div class="weather-current-temp">
+                        {{$ctrl.wheatherResponse.temp_c}} C
+                    </div>
+
+                    <div class="weather-current-cloudstate">
+                        <img src="{{$ctrl.wheatherResponse.cloud_icon}}">
+                    </div>
+
+                    <div class="weather-current-cloudstate">
+                        {{$ctrl.wheatherResponse.cloud_state}}
+                    </div>
+
+                    <div class="weather-current-metadata">
+                        Feels Like {{$ctrl.wheatherResponse.feelslike_c}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Humidity {{$ctrl.wheatherResponse.humidity}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Pressure {{$ctrl.wheatherResponse.pressure}} MB
+                    </div>
+                    <hr class="hr1">
+                    <weather-forecast></weather-forecast>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer-component></footer-component>
+
+<script>
+    function getCity(event) {
+        const cityName = event.target.value;
+        if (cityName.length >= 3) {
+            const weather_api = `https://api.weatherapi.com/v1/search.json?key=f29ec216fe0f4e4da5f65632203004&q=${cityName}`;
+            const request = new XMLHttpRequest();
+
+            request.onreadystatechange = function () {
+                if (request.readyState === 4) {
+                    const citiesFromServer = JSON.parse(request.responseText);
+                    const cityNames = [];
+
+                    citiesFromServer.forEach(element => {
+                        cityNames.push(element.name);
+                    });
+
+                    $(function () {
+                        $("#city").autocomplete({
+                            source: cityNames
+                        });
+                    });
+                }
+            }
+
+            request.open('GET', weather_api);
+            request.send();
+        }
+    }
+</script>
