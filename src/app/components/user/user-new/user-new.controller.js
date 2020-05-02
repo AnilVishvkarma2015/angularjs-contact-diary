@@ -1,9 +1,9 @@
-function UserNewController() {
+function UserNewController(DashboardService) {
     const ctrl = this;
+    
     ctrl.user = {};
 
     ctrl.newUser = function (user) {
-        console.log('New User Submitted:', user);
         if (!user || !user.firstName) {
             return;
         }
@@ -16,15 +16,11 @@ function UserNewController() {
             gender: user.gender
         };
 
-        const existingUsers = JSON.parse(localStorage.getItem('users'));
-
-        if (existingUsers && existingUsers.length > 0) {
-            existingUsers.push(newUser);
-            localStorage.setItem('users', JSON.stringify(existingUsers));
-            ctrl.user = {};
-            return;
-        }
-    };
+        DashboardService.setDefaultContacts(newUser);
+        ctrl.user = {};
+    }
 }
+
+UserNewController.$inject = ['DashboardService'];
 
 angular.module('user').controller('UserNewController', UserNewController);

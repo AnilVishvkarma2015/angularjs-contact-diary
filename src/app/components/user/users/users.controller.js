@@ -1,7 +1,14 @@
-function UsersController() {
+function UsersController($scope, DashboardService) {
     const ctrl = this;
-    const users = JSON.parse(localStorage.getItem('users'));
-    ctrl.users = users;
+    ctrl.users = DashboardService.getDefaultContacts();
+
+    ctrl.orderBySelectedValue = 'name';
+
+    ctrl.orderByValue = function(value) {
+        ctrl.orderBySelectedValue = value;
+    }
 }
+
+UsersController.$inject = ['$scope', 'DashboardService'];
 
 angular.module('user').controller('UsersController', UsersController);

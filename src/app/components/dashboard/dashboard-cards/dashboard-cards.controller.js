@@ -1,11 +1,8 @@
-function DashboardCardsController() {
+function DashboardCardsController(DashboardService) {
     const ctrl = this;
-    const payload = JSON.parse(localStorage.getItem('users'))
-
-    if (payload && payload.length > 0) {
-        ctrl.users = payload;
-        return;
-    }
+    ctrl.users = DashboardService.getDefaultContacts();
 }
+
+DashboardCardsController.$inject = ['DashboardService']
 
 angular.module('dashboard').controller('DashboardCardsController', DashboardCardsController);

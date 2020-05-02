@@ -7,14 +7,14 @@
     <div class="col-sm-9">
         <table class="contacts-table">
             <thead>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Email</th>
+                <th ng-click="$ctrl.orderByValue('name')" style="cursor: pointer;">Name <i class="fa fa-sort"></i></th>
+                <th ng-click="$ctrl.orderByValue('company')" style="cursor: pointer;">Company <i class="fa fa-sort"></i></th>
+                <th ng-click="$ctrl.orderByValue('email')" style="cursor: pointer;">Email <i class="fa fa-sort"></i></th>
                 <th>Contact</th>
                 <th>Action</th>
             </thead>
             <tbody>
-                <tr ng-repeat="user in $ctrl.users">
+                <tr ng-repeat="user in $ctrl.users | orderBy: $ctrl.orderBySelectedValue">
                     <td>{{user.name}}</td>
                     <td>{{user.company}}</td>
                     <td>{{user.email}}</td>

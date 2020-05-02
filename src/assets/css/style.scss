@@ -187,6 +187,17 @@ table tbody tr:last-child {
     padding: 50px;
 }
 
+.login-pointers {
+    margin-top: 200px;
+    background: #373a47;
+    min-height: 320px;
+    border-radius: 4px;
+    padding: 20px;
+    line-height: 30px;
+    color: white;
+    font-family: "Open Sans",sans-serif;
+}
+
 .login-heading {
     font-size: 22px;
     font-family: 'Passion One', cursive;
@@ -268,15 +279,6 @@ table tbody tr:last-child {
     text-transform: uppercase;
     border-bottom: 1px solid white;
     cursor: pointer;
-}
-
-ol li {
-    font-family: "Open Sans",sans-serif;
-    color: white;
-    font-weight: 400;
-    font-size: 15px;
-    padding: 10px;
-    margin-left: -40px;
 }
 
 .side-nav-drawer {
