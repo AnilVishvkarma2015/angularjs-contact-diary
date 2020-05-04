@@ -4,10 +4,20 @@
             <ul>
                 <li><i class="fa fa-address-book nav-icon"></i><a href="#/dashboard">contacts dashboard</a></li>
                 <li><i class="fa fa-table nav-icon"></i><a href="#/users">contacts list</a></li>
-                <li><i class="fa fa-user nav-icon"></i><a href="#/user/new">add new contact</a></li>
+                <li><i class="fa fa-user-plus nav-icon"></i><a href="#/user/new">add new contact</a></li>
                 <li><i class="fa fa-cloud nav-icon"></i><a href="#/weather">weather forecast</a></li>
                 <li><i class="fa fa-power-off nav-icon"></i><a href="#/logout">logout</a></li>
             </ul>
         </div>
     </div>
 </div>
+
+<script>
+    $(function(){
+        $('li').hover(function() {
+            $(this).css("background-color", "green");
+        }, function() {
+            $(this).css("background-color", "#373a47");
+        })
+    })
+</script>

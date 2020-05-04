@@ -16,7 +16,7 @@ function UserNewController(DashboardService) {
             gender: user.gender
         };
 
-        DashboardService.setDefaultContacts(newUser);
+        DashboardService.setNewContact(newUser);
         ctrl.user = {};
     }
 }

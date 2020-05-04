@@ -34,7 +34,7 @@ function DashboardService() {
         return this.defaultContacts;
     }
 
-    this.setDefaultContacts = function (newContact) {
+    this.setNewContact = function (newContact) {
         this.defaultContacts.push(newContact);
     }
 }

@@ -6,7 +6,7 @@ function WeatherForecastController($scope, ForecastWeatherService, CommonWeather
         return ForecastWeatherService.getWeatherForecast(cityName).then(forecastResponse => {
             ctrl.forecastDetails = forecastResponse;
         }).catch(err => {
-            ctrl.forecastDetails = forecastResponse;
+            ctrl.forecastDetails = err;
         })
     }
 

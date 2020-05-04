@@ -38,7 +38,7 @@
   padding: 0px; }
   .nav .nav-items ul li {
     list-style-type: none;
-    margin-top: 7px;
+    padding: 2px;
     border-bottom: 1px solid white;
     height: 40px; }
     .nav .nav-items ul li a {
