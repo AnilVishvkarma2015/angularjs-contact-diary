@@ -2,30 +2,30 @@ function DashboardService() {
     this.defaultContacts = [
         {
             "name": "Anil Vishvkarma",
-            "email": "anil.vishvkarma@jci.com",
+            "email": "anil.vishvkarma@gmail.com",
             "mobile": "971344864",
-            "company": "Johnson Controls India Pvt. Ltd.",
+            "company": "Software Developer",
             "gender": "male"
         },
         {
             "name": "Akshay Soni",
             "email": "akshay.soni@gmail.com",
             "mobile": "9753632727",
-            "company": "Impetus Limited",
+            "company": "Limited",
             "gender": "male"
         },
         {
             "name": "Elyse Hobson",
-            "email": "elyse.hobson@barclays.com",
+            "email": "elyse.hobson@gmail.com",
             "mobile": "971344864",
-            "company": "Barclays Technology",
+            "company": "Technology",
             "gender": "female"
         },
         {
             "name": "Deepak Ahirwal",
             "email": "deepak.ahirwal@cg.com",
             "mobile": "971344864",
-            "company": "Cognizent Technology.",
+            "company": "Technology.",
             "gender": "male"
         }
     ];
